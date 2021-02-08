@@ -1,0 +1,24 @@
+{
+  "name": "express-budget-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.15"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

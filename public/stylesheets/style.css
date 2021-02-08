@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: url("/images/money.jpg") no-repeat;
+	background-size: cover;
+}
+
+.body-con {
+	opacity: 0.8;
+}
+
+.input {
+	/* width: 55%; */
+	/* margin: 0; */
+}
+
+p {
+	display: inline;
+	margin: 5px;
+}
+li {
+	margin: 10px;
+}

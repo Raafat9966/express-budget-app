@@ -9,7 +9,7 @@
 			integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
 			crossorigin="anonymous"
 		/>
-		<link rel="stylesheet" , href="/stylesheets/style.css" />
+		<link rel="stylesheet" , href="/css/style.css" />
 		<title>Budget App</title>
 	</head>
 	<body>
@@ -66,11 +66,13 @@
 						<p><%= element.inputDate %></p>
 						<p><%= element.amount %>€</p>
 						<p><%= element.description %></p>
-						<button
-							type="button"
-							class="btn-close btn-close-black float-end"
-							aria-label="Close"
-						></button>
+						<form action="/delete/:id" method="DELETE">
+							<button
+								type="submit"
+								class="btn-close btn-close-black float-end"
+								aria-label="Close"
+							></button>
+						</form>
 					</li>
 				</ul>
 			</div>

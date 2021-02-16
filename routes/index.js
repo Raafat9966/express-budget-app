@@ -37,9 +37,6 @@ router.post("/add", (req, res) => {
 			})
 			.catch((err) => {
 				res.status(500).send(err);
-			})
-			.catch((err) => {
-				res.status(500).send(err);
 			});
 	});
 });

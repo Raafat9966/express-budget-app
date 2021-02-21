@@ -48,7 +48,16 @@ const getInput = () => {
 	});
 };
 
+const deleteItem = (id) => {
+	return new Promise((res, rej) => {
+		Input.findByIdAndDelete({ _id: id })
+			.then(() => res("success"))
+			.catch((err) => rej(err));
+	});
+};
+
 module.exports = {
 	addInput,
 	getInput,
+	deleteItem,
 };

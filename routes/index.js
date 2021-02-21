@@ -8,17 +8,13 @@ router.get("/", (req, res) => {
 	server
 		.getInput()
 		.then((result) => {
-			if (result) {
-				let sum = result
-					.map((element) => element.amount)
-					.reduce((a, b) => a + b);
-				res.status(200).render("index", { result, sum });
-			} else {
-				res.status(200).render("index", { result });
-			}
+			let sum = result
+				.map((element) => element.amount)
+				.reduce((a, b) => a + b);
+			res.status(200).render("index", { result, sum });
 		})
 		.catch((err) => {
-			res.status(500).send(err);
+			res.status(500).render("index", { result: [], sum: [] });
 		});
 });
 
@@ -39,6 +35,15 @@ router.post("/add", (req, res) => {
 				res.status(500).send(err);
 			});
 	});
+});
+
+router.delete("/delete/:id", async (req, res) => {
+	try {
+		await server.deleteItem(req.params.id);
+		res.redirect("/");
+	} catch (err) {
+		res.status(500).send(err);
+	}
 });
 
 module.exports = router;
